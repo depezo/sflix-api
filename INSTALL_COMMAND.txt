@@ -1,0 +1,13 @@
+Run this command on your server to install without downloading Chromium:
+
+PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true PUPPETEER_SKIP_DOWNLOAD=true npm install --omit=optional
+
+If the above still fails, try this alternative approach:
+
+1. First, install everything except puppeteer:
+npm install axios cheerio cors express puppeteer-extra puppeteer-extra-plugin-stealth user-agents
+
+2. Then install puppeteer-core instead of puppeteer:
+npm install puppeteer-core
+
+3. Update your code to use puppeteer-core with system Chrome.
